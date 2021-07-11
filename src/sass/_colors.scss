@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #d6eaf8;
+}
+
+input {
+    appearance: none;
+    box-sizing: border-box;
+    border: 1px solid hsl(31, 100%, 50%);
+    background: transparent;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.timer {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.field {
+    display: inline-block;
+    font-size: 16px;
+    padding: 16px;
+    text-transform: uppercase;
+}
+
+.value {
+    display: block;
+    font-size: 64px;
+}
+
+button {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    transition: 0.2s;
+}
+
+button.is-active {
+    background: linear-gradient(#f5ae00, #f55a00) #f5ae00;
+}
