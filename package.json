@@ -25,10 +25,12 @@
         "parcel-plugin-handlebars-precompile": "^1.0.2",
         "parcel-plugin-nuke-dist": "^1.0.1",
         "posthtml-include": "^1.6.2",
-        "sass": "^1.32.8"
+        "sass": "^1.32.8",
+        "sweetalert2": "^11.0.18"
     },
     "dependencies": {
         "gh-pages": "^3.2.2",
-        "sass": "^1.32.8"
+        "sass": "^1.32.8",
+        "sweetalert2": "^11.0.18"
     }
 }
