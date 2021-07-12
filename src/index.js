@@ -28,9 +28,10 @@ refs.input.addEventListener('input', onChoiceData);
 
 
 function onChoiceData() {
-
-    choiceDate = Date.parse(new Date(refs.input.value)) - (180 * 60 * 1000);
-    // console.log(choiceDate);
+    console.log(Date.parse(new Date(refs.input.value)));
+    choiceDate = Date.parse(new Date(refs.input.value)) - 10800000;
+    console.log(choiceDate);
+    console.log(Date.parse(new Date(refs.input.value)));
 
     if (choiceDate < currentDate) {
         // console.log('not correct data');
@@ -56,9 +57,7 @@ function onTimerStart() {
             clearInterval(intervalId);
             return;
         }
-
         // console.log('отсчет времени пошел');
-        // console.log(choiceDate);
 
         const deltaTime = choiceDate - Date.now();
         // console.log(deltaTime);
