@@ -29,7 +29,9 @@
         "sweetalert2": "^11.0.18"
     },
     "dependencies": {
+        "debounce": "^1.2.1",
         "gh-pages": "^3.2.2",
+        "lodash.debounce": "^4.0.8",
         "sass": "^1.32.8",
         "sweetalert2": "^11.0.18"
     }

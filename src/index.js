@@ -1,5 +1,7 @@
 import './sass/main.scss';
 import Swal from 'sweetalert2';
+import _debounce from 'debounce';
+// var debounce = require(' lodash.debounce ');
 
 const refs = {
     input: document.querySelector('#date-selector'),
@@ -15,6 +17,7 @@ const refs = {
 // обновить страницу
 // window.location.reload();
 
+var debounce = require('debounce');
 
 refs.btn.setAttribute('disabled', true);
 
@@ -24,7 +27,8 @@ const currentDate = Date.now();
 let choiceDate = '';
 
 refs.btn.addEventListener('click', onTimerStart);
-refs.input.addEventListener('input', onChoiceData);
+refs.input.addEventListener('input', debounce(onChoiceData, 1000));
+
 
 
 function onChoiceData() {
@@ -33,6 +37,7 @@ function onChoiceData() {
 
     if (choiceDate < currentDate) {
         // console.log('not correct data');
+
         Swal.fire('Please choose a date in the future');
         refs.input.value = '';
 
