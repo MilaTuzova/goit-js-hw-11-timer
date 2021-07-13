@@ -28,10 +28,8 @@ refs.input.addEventListener('input', onChoiceData);
 
 
 function onChoiceData() {
-    console.log(Date.parse(new Date(refs.input.value)));
+
     choiceDate = Date.parse(new Date(refs.input.value)) - 10800000;
-    console.log(choiceDate);
-    console.log(Date.parse(new Date(refs.input.value)));
 
     if (choiceDate < currentDate) {
         // console.log('not correct data');
