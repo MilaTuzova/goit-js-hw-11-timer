@@ -41,11 +41,17 @@ function onChoiceData() {
         Swal.fire('Please choose a date in the future');
         refs.input.value = '';
 
+        onStopTimer();
     } else {
         refs.btn.removeAttribute('disabled');
     }
 }
 
+function onStopTimer() {
+    const time = convertMs(0);
+    updateFaceTime(time);
+
+}
 
 function onTimerStart() {
     // console.log('btn click');
@@ -55,7 +61,7 @@ function onTimerStart() {
 
     setInterval(() => {
 
-        if (currentDate === choiceDate) {
+        if (currentDate === choiceDate || choiceDate < currentDate) {
             // console.log('таймер подошел к 0');
             clearInterval(intervalId);
             return;
